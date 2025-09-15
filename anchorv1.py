@@ -8,7 +8,7 @@ st.title("⚓ Anchor Method Generator")
 with st.form("schedule_form"):
     lesson = st.text_input("Lesson / Topic name", placeholder="e.g., VPC & Subnets")
     base_date = st.date_input("First study date (Day 0)", value=datetime.today().date())
-    extended = st.toggle("Extended anchors (3 mo, 6 mo, 1 yr)")
+    extended = st.toggle("Extended Anchors (3 mo, 6 mo, 1 yr)")
     submitted = st.form_submit_button("Generate dates")
 
 if submitted:
