@@ -3,7 +3,7 @@ from datetime import datetime
 from dateutil.relativedelta import relativedelta
 
 st.set_page_config(page_title="Anchor Method Scheduler", page_icon="⚓", layout="centered")
-st.title("⚓ Anchor Method – Review Date Generator")
+st.title("⚓ Anchor Method Generator")
 
 with st.form("schedule_form"):
     lesson = st.text_input("Lesson / Topic name", placeholder="e.g., VPC & Subnets")
@@ -61,7 +61,7 @@ if submitted:
             return "\n".join(lines)
 
         st.download_button(
-            label="Download calendar (.ics)",
+            label="Download Calendar (.ics)",
             data=to_ics(anchors),
             file_name=f"{lesson.replace(' ', '_')}_anchors.ics",
             mime="text/calendar",
