@@ -35,7 +35,6 @@ if submitted:
             [{"Anchor": label, "Date": dt.strftime("%Y-%m-%d (%a)")} for label, dt in anchors]
         )
 
-        # Copy-paste friendly block
         st.download_button(
             label="Download as .txt",
             data="\n".join([f"{label}: {dt.strftime('%Y-%m-%d (%a)')}" for label, dt in anchors]),
@@ -43,7 +42,7 @@ if submitted:
             mime="text/plain",
         )
 
-        # Optional ICS export
+        #ICS export
         def to_ics(entries):
             def ics_dt(d): return d.strftime("%Y%m%d")
             lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Anchor Method//EN"]
